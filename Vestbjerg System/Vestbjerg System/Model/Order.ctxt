@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Order
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Order\ here.\r\n\r\n\ @author\ Karen\ Romo\r\n\ @version\ 26/05/2025\r\n
+comment1.params=status\ orderNo\ totalPrice\ orderDate
+comment1.target=Order(java.lang.String,\ int,\ double,\ java.lang.String)
+comment2.params=product
+comment2.target=void\ addProduct(SimpleProduct)
+numComments=3
