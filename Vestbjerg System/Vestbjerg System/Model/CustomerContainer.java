@@ -2,7 +2,7 @@ package Model;
 
 import java.util.ArrayList;
 public class CustomerContainer {
-    private ArrayList<Product> customers;
+    private ArrayList<Customer> customers;
     private static CustomerContainer instance;
     private CustomerContainer() {
         customers = new ArrayList<>();
@@ -14,14 +14,15 @@ public class CustomerContainer {
         }
         return instance;
     }
-    public Customer getCustomerByNameContains() {
-        
-        
+    public ArrayList<Customer> getCustomerByNameContains() {
+       ArrayList<SimpleProduct> result = new ArrayList<>();
+       
+        for (Customer c : customers){
+            if (c.getName().contains(searchString)){
+                result.add(c);
+            }
+        }
+    
+        return result;
     }
-    public ArrayList<Product> getCustomers() {
-        return customers;
     }
-    public void addCustomer(Product customer) {
-        customers.add(customer);
-    }
-}
