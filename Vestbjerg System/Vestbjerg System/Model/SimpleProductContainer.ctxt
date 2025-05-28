@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=SimpleProductContainer
+comment0.text=\r\n\ This\ class\ contains\ a\ lsit\ of\ all\ simple\ products.\r\n
+comment1.params=
+comment1.target=SimpleProductContainer()
+comment2.params=
+comment2.target=SimpleProductContainer\ getInstance()
+comment2.text=\r\n\ Singleton.\r\n
+comment3.params=product
+comment3.target=void\ addProduct(SimpleProduct)
+comment4.params=searchString
+comment4.target=java.util.ArrayList\ findProductByNameContains(java.lang.String)
+comment4.text=\r\n\ Finds\ every\ product\ in\ container\ that\ contains\ search\ term\ and\ returns\ as\ array\ of\ products.\r\n
+numComments=5

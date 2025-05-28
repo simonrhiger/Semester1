@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class SimpleProductContainer
 {
     private ArrayList<SimpleProduct> products;
-    private SimpleProductContainer instance;
+    private static SimpleProductContainer instance;
     
     private SimpleProductContainer(){
         products = new ArrayList<>();
@@ -17,18 +17,22 @@ public class SimpleProductContainer
     /**
      * Singleton.
      */
-    public SimpleProductContainer getInstance(){
+    public static SimpleProductContainer getInstance(){
         if (instance == null){
             instance = new SimpleProductContainer();
         }
         return instance;
     }
     
+    public void addProduct(SimpleProduct product){
+        products.add(product);
+    }
+    
     /**
      * Finds every product in container that contains search term and returns as array of products.
      */
-    public SimpleProduct[] findProductByNameContains(String searchString){
-        SimpleProduct[] result = new ArrayList<>();
+    public ArrayList<SimpleProduct> findProductByNameContains(String searchString){
+        ArrayList<SimpleProduct> result = new ArrayList<>();
         
         for (SimpleProduct sp : products){
             if (sp.getName().contains(searchString)){
