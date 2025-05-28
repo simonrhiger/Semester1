@@ -1,4 +1,4 @@
-import package controller;
+import package Controller;
 
 public class ProductController
 {

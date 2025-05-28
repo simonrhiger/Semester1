@@ -2,11 +2,9 @@ package Model;
 import java.util.ArrayList;
 
 /**
- * This class contains a lsit of all simple products.
+ * This class contains a list of all simple products.
  */
-
-public class SimpleProductContainer
-{
+public class SimpleProductContainer{
     private ArrayList<SimpleProduct> products;
     private static SimpleProductContainer instance;
     
@@ -24,6 +22,9 @@ public class SimpleProductContainer
         return instance;
     }
     
+    /**
+     * Adds product to ArrayList
+     */
     public void addProduct(SimpleProduct product){
         products.add(product);
     }
