@@ -1,4 +1,8 @@
 package Model;
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 import java.util.ArrayList;
 
 /**
