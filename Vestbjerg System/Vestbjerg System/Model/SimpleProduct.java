@@ -6,9 +6,7 @@ package Model;
  * @author Lilja
  * @version 26-05-2025
  */
-public class SimpleProduct
-{
-    // instance variables
+public class SimpleProduct {
     private int productID;
     private String productName;
     private String manufacturer;
@@ -42,11 +40,17 @@ public class SimpleProduct
         this.sku = sku;
     }
     
-    public String getName(){
+    /**
+     * Returns name.
+     */
+    public String getName() {
         return productName;
     }
     
-    public double getCostPrice(){
+    /**
+     * Returns cost price.
+     */
+    public double getCostPrice() {
         return costPrice;
     }
 }

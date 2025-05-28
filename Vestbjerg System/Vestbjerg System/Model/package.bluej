@@ -1,91 +1,31 @@
 #BlueJ package file
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-dependency1.from=SimpleProductContainer
+dependency1.from=Orderline
 dependency1.to=SimpleProduct
 dependency1.type=UsesDependency
 dependency2.from=OrderContainer
 dependency2.to=Order
-=======
-dependency1.from=Order
-dependency1.to=Orderline
-dependency1.type=UsesDependency
-dependency2.from=Order
-dependency2.to=SimpleProduct
->>>>>>> Stashed changes
-dependency2.type=UsesDependency
-dependency3.from=SimpleProductContainerTest
-=======
-dependency1.from=SimpleProductContainerTest
-dependency1.to=SimpleProduct
-dependency1.type=UsesDependency
-dependency2.from=SimpleProductContainerTest
-dependency2.to=SimpleProductContainer
 dependency2.type=UsesDependency
 dependency3.from=SimpleProductContainer
->>>>>>> Stashed changes
 dependency3.to=SimpleProduct
 dependency3.type=UsesDependency
-dependency4.from=SimpleProductContainerTest
-dependency4.to=SimpleProductContainer
+dependency4.from=Order
+dependency4.to=Orderline
 dependency4.type=UsesDependency
-<<<<<<< Updated upstream
-dependency5.from=CustomerContainer
-dependency5.to=Customer
+dependency5.from=Order
+dependency5.to=SimpleProduct
 dependency5.type=UsesDependency
-<<<<<<< Updated upstream
-dependency6.from=CustomerContainer
-=======
-dependency5.from=OrderContainer
-dependency5.to=Order
-dependency5.type=UsesDependency
-dependency6.from=Orderline
->>>>>>> Stashed changes
-dependency6.to=SimpleProduct
-dependency6.type=UsesDependency
-dependency7.from=Order
-dependency7.to=Orderline
-dependency7.type=UsesDependency
-dependency8.from=Order
-dependency8.to=Customer
-dependency8.type=UsesDependency
-dependency9.from=Order
-dependency9.to=SimpleProduct
-dependency9.type=UsesDependency
 objectbench.height=92
-objectbench.width=451
-package.divider.horizontal=0.599791013584117
-package.divider.vertical=0.7991214057507987
-package.editor.height=394
-package.editor.width=660
-package.editor.x=540
-package.editor.y=68
-package.frame.height=600
-package.frame.width=800
-package.numDependencies=9
-<<<<<<< Updated upstream
-=======
-dependency6.from=OrderContainer
-dependency6.to=Order
-dependency6.type=UsesDependency
-dependency7.from=CustomerContainer
-dependency7.to=Customer
-dependency7.type=UsesDependency
-objectbench.height=92
-objectbench.width=826
-package.divider.horizontal=0.5502638522427441
+objectbench.width=494
+package.divider.horizontal=0.7037556053811659
 package.divider.vertical=0.8628148959474261
-package.editor.height=624
-package.editor.width=1424
-package.editor.x=0
-package.editor.y=0
+package.editor.height=610
+package.editor.width=622
+package.editor.x=4
+package.editor.y=57
 package.frame.height=830
-package.frame.width=1550
-package.numDependencies=7
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-package.numTargets=8
+package.frame.width=748
+package.numDependencies=5
+package.numTargets=7
 package.showExtends=true
 package.showUses=true
 readme.height=60
@@ -98,91 +38,47 @@ target1.name=Order
 target1.showInterface=false
 target1.type=ClassTarget
 target1.width=120
-<<<<<<< Updated upstream
-target1.x=260
-target1.y=70
-=======
 target1.x=290
 target1.y=350
->>>>>>> Stashed changes
 target2.height=70
 target2.name=OrderContainer
 target2.showInterface=false
 target2.type=ClassTarget
 target2.width=120
-<<<<<<< Updated upstream
-target2.x=380
-target2.y=310
-=======
 target2.x=500
 target2.y=320
->>>>>>> Stashed changes
 target3.height=70
-target3.name=SimpleProductContainerTest
+target3.name=Orderline
 target3.showInterface=false
-target3.type=UnitTestTargetJunit5
-<<<<<<< Updated upstream
-target3.width=200
-target3.x=70
-target3.y=10
-=======
-target3.width=180
-target3.x=400
-target3.y=60
->>>>>>> Stashed changes
+target3.type=ClassTarget
+target3.width=120
+target3.x=10
+target3.y=210
 target4.height=70
-target4.name=Orderline
+target4.name=Customer
 target4.showInterface=false
 target4.type=ClassTarget
 target4.width=120
-<<<<<<< Updated upstream
-target4.x=460
-target4.y=170
-=======
 target4.x=10
 target4.y=210
->>>>>>> Stashed changes
 target5.height=70
-target5.name=Customer
+target5.name=CustomerContainer
 target5.showInterface=false
 target5.type=ClassTarget
-target5.width=120
-<<<<<<< Updated upstream
-target5.x=140
-target5.y=330
-=======
-target5.x=10
-target5.y=210
->>>>>>> Stashed changes
+target5.width=150
+target5.x=130
+target5.y=470
 target6.height=70
-target6.name=CustomerContainer
+target6.name=SimpleProduct
 target6.showInterface=false
 target6.type=ClassTarget
-target6.width=150
-<<<<<<< Updated upstream
-target6.x=10
-target6.y=210
-=======
-target6.x=110
-target6.y=460
-target7.association=SimpleProductContainerTest
->>>>>>> Stashed changes
+target6.width=120
+target6.x=50
+target6.y=340
 target7.height=70
-target7.name=SimpleProduct
+target7.name=SimpleProductContainer
 target7.showInterface=false
 target7.type=ClassTarget
-target7.width=120
-target7.x=10
-target7.y=260
-target8.height=70
-target8.name=SimpleProductContainer
-target8.showInterface=false
-target8.type=ClassTarget
-target8.width=180
-<<<<<<< Updated upstream
-target8.x=50
-target8.y=150
-=======
-target8.x=370
-target8.y=90
->>>>>>> Stashed changes
+target7.width=180
+target7.x=370
+target7.y=90

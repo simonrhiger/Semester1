@@ -3,6 +3,7 @@ comment0.target=SimpleProductContainer
 comment0.text=\r\n\ This\ class\ contains\ a\ list\ of\ all\ simple\ products.\r\n
 comment1.params=
 comment1.target=SimpleProductContainer()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ SimpleProductContainer.\r\n
 comment2.params=
 comment2.target=SimpleProductContainer\ getInstance()
 comment2.text=\r\n\ Singleton.\r\n

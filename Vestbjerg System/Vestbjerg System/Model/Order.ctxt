@@ -1,12 +1,16 @@
 #BlueJ class context
 comment0.target=Order
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Order\ here.\r\n\r\n\ @author\ Karen\ Romo\r\n\ @version\ 26/05/2025\r\n
+comment0.text=\r\n\ this\ class\ represents\ orders.\r\n\r\n\ @author\ Karen\ Romo\r\n\ @version\ 26/05/2025\r\n
 comment1.params=status\ orderNo\ orderDate
 comment1.target=Order(java.lang.String,\ int,\ java.lang.String)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Order.\r\n
 comment2.params=product\ quantity
 comment2.target=void\ addProduct(SimpleProduct,\ int)
+comment2.text=\r\n\ add\ product\ to\ ordeline\ and\ add\ orderlien\ to\ list\ of\ orderlines.\r\n
 comment3.params=customer
 comment3.target=void\ setCustomer(Customer)
+comment3.text=\r\n\ Sets\ customer.\r\n
 comment4.params=
 comment4.target=double\ getTotalPrice()
+comment4.text=\r\n\ Returns\ total\ price.\r\n
 numComments=5

@@ -8,7 +8,10 @@ public class OrderContainer {
     private ArrayList<Order> orders;
     private static OrderContainer instance;
     
-    private OrderContainer(){
+    /**
+     * Constructor for objects of class OrderContainer.
+     */
+    private OrderContainer() {
         orders = new ArrayList<>();        
     }
     

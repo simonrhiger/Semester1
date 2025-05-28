@@ -1,9 +1,7 @@
 #BlueJ class context
 comment0.target=ProductController
-comment0.text=\r\n\ This\ controller\ class\ handles\ Products\r\n
-comment1.params=
-comment1.target=ProductController()
-comment2.params=searchString
-comment2.target=java.util.ArrayList\ findProductByNameContains(java.lang.String)
-comment2.text=\r\n\ This\ method\ returns\ list\ of\ products\ from\ the\ container\r\n
-numComments=3
+comment0.text=\r\n\ This\ controller\ class\ handles\ Products.\r\n
+comment1.params=searchString
+comment1.target=java.util.ArrayList\ findProductByNameContains(java.lang.String)
+comment1.text=\r\n\ This\ method\ returns\ list\ of\ products\ from\ the\ container\r\n
+numComments=2

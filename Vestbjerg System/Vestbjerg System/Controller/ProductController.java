@@ -3,15 +3,9 @@ import Model.*;
 import java.util.ArrayList;
 
 /**
- * This controller class handles Products
+ * This controller class handles Products.
  */
-public class ProductController
-{
-    
-    public ProductController(){
-        
-    }
-    
+public class ProductController {
     /**
      * This method returns list of products from the container
      */

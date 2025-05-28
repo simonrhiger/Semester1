@@ -8,6 +8,9 @@ public class CustomerContainer {
     private ArrayList<Customer> customers;
     private static CustomerContainer instance;
     
+    /**
+     * Constructor for objects of class CustomerContainer.
+     */
     private CustomerContainer() {
         customers = new ArrayList<>();
     }
