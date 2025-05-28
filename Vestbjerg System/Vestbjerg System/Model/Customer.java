@@ -1,3 +1,5 @@
+package Model;
+
  
 
 import java.util.ArrayList;
@@ -14,14 +16,5 @@ public class Customer {
     }
     public String getName() {
         return name;
-    }
-    public String getPhone() {
-        return phone;
-    }
-    public String getEmail() {
-        return email;
-    }
-    public String getAddress() {
-        return address;
     }
 }
