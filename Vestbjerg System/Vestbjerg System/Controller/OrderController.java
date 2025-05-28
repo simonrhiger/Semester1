@@ -52,4 +52,11 @@ public class OrderController
     public void selectCustomer(Customer customer) {
         currentOrder.setCustomer(customer);
     }
+    
+    /**
+     * adds order to container.
+     */
+    public void confirmOrder() {
+        OrderContainer.getInstance().addOrder(currentOrder);
+    }
 }
