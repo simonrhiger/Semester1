@@ -14,8 +14,8 @@ public class CustomerContainer {
         }
         return instance;
     }
-    public ArrayList<Customer> getCustomerByNameContains() {
-       ArrayList<SimpleProduct> result = new ArrayList<>();
+    public ArrayList<Customer> getCustomerByNameContains(String searchString) {
+       ArrayList<Customer> result = new ArrayList<>();
        
         for (Customer c : customers){
             if (c.getName().contains(searchString)){

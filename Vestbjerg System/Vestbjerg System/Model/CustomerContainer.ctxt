@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=CustomerContainer
+comment1.params=
+comment1.target=CustomerContainer()
+comment2.params=
+comment2.target=CustomerContainer\ getInstance()
+comment3.params=searchString
+comment3.target=java.util.ArrayList\ getCustomerByNameContains(java.lang.String)
+numComments=4
