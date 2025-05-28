@@ -5,13 +5,13 @@ import java.util.ArrayList;
 /**
  * This controller class handles Products
  */
-
 public class ProductController
 {
     
     public ProductController(){
         
     }
+    
     /**
      * This method returns list of products from the container
      */

@@ -9,14 +9,14 @@ package Model;
  */
 public class Orderline
 {
+    private SimpleProduct product;
     private int quantity;
-    private double price;
     private double discount;
     
-    public Orderline (int quantity, double price, double discount)
+    public Orderline (SimpleProduct product, int quantity, double discount)
     {
+        this.product = product;
         this.quantity = quantity;
-        this.price = price;
         this.discount = discount;
     }
     
@@ -26,13 +26,12 @@ public class Orderline
         return quantity;
     }
     
-    public double getPrice()
-    {
-        return price;
-    }
-    
     public double discount()
     {
         return discount;
+    }
+    
+    public double getPrice(){
+        return product.getCostPrice() * quantity;
     }
 }

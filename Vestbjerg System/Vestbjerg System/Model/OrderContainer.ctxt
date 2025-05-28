@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=OrderContainer
+comment0.text=\r\n\ This\ class\ contains\ a\ list\ of\ all\ orders.\r\n
+comment1.params=
+comment1.target=OrderContainer()
+comment2.params=
+comment2.target=OrderContainer\ getInstance()
+comment2.text=\r\n\ Singleton.\r\n
+comment3.params=order
+comment3.target=void\ addOrder(Order)
+comment3.text=\r\n\ Adds\ order\ to\ ArrayList\r\n
+numComments=4

@@ -30,7 +30,7 @@ public class SimpleProductContainer{
     }
     
     /**
-     * Finds every product in container that contains search term and returns as array of products.
+     * Finds every product in container that contains search term and returns an array of products.
      */
     public ArrayList<SimpleProduct> findProductByNameContains(String searchString){
         ArrayList<SimpleProduct> result = new ArrayList<>();

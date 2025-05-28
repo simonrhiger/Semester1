@@ -1,5 +1,6 @@
 #BlueJ package file
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 dependency1.from=SimpleProductContainer
 dependency1.to=SimpleProduct
 dependency1.type=UsesDependency
@@ -14,16 +15,32 @@ dependency2.to=SimpleProduct
 >>>>>>> Stashed changes
 dependency2.type=UsesDependency
 dependency3.from=SimpleProductContainerTest
+=======
+dependency1.from=SimpleProductContainerTest
+dependency1.to=SimpleProduct
+dependency1.type=UsesDependency
+dependency2.from=SimpleProductContainerTest
+dependency2.to=SimpleProductContainer
+dependency2.type=UsesDependency
+dependency3.from=SimpleProductContainer
+>>>>>>> Stashed changes
 dependency3.to=SimpleProduct
 dependency3.type=UsesDependency
 dependency4.from=SimpleProductContainerTest
 dependency4.to=SimpleProductContainer
 dependency4.type=UsesDependency
+<<<<<<< Updated upstream
 dependency5.from=CustomerContainer
 dependency5.to=Customer
 dependency5.type=UsesDependency
 <<<<<<< Updated upstream
 dependency6.from=CustomerContainer
+=======
+dependency5.from=OrderContainer
+dependency5.to=Order
+dependency5.type=UsesDependency
+dependency6.from=Orderline
+>>>>>>> Stashed changes
 dependency6.to=SimpleProduct
 dependency6.type=UsesDependency
 dependency7.from=Order
@@ -46,6 +63,7 @@ package.editor.y=68
 package.frame.height=600
 package.frame.width=800
 package.numDependencies=9
+<<<<<<< Updated upstream
 =======
 dependency6.from=OrderContainer
 dependency6.to=Order
@@ -64,6 +82,8 @@ package.editor.y=0
 package.frame.height=830
 package.frame.width=1550
 package.numDependencies=7
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 package.numTargets=8
 package.showExtends=true

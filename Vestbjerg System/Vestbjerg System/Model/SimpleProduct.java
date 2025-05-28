@@ -1,6 +1,5 @@
 package Model;
 
-
 /**
  * Class SimpleProduct with all of the attributes of a simple product
  *
@@ -45,5 +44,9 @@ public class SimpleProduct
     
     public String getName(){
         return productName;
+    }
+    
+    public double getCostPrice(){
+        return costPrice;
     }
 }

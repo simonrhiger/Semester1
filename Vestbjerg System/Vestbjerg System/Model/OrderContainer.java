@@ -1,37 +1,8 @@
 package Model;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
-
-import java.util.ArrayList;
-public class OrderContainer {
-	private ArrayList<Order> orders;
-	private static OrderContainer instance;
-	
-private OrderContainer(){
-	orders = new ArrayList<>();
-	
-}
-	
-	public static OrderContainer getInstance() {
-		if(instance==null) {
-			instance = new OrderContainer();
-		}
-		return instance; 
-	}
-	public void saveOrder(Order order) {
-		orders.add(orders);
-    }
-   public ArrayList<Order> getAllOrders(){
-	   return orders; 
->>>>>>> Stashed changes
-
->>>>>>> Stashed changes
 import java.util.ArrayList;
 
 /**
- * This class contains a list of all simple products.
+ * This class contains a list of all orders.
  */
 public class OrderContainer {
     private ArrayList<Order> orders;

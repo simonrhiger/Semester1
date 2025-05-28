@@ -1,7 +1,9 @@
 #BlueJ class context
 comment0.target=CustomerController
+comment0.text=\r\n\ This\ controller\ class\ handles\ customers.\r\n
 comment1.params=
 comment1.target=CustomerController()
 comment2.params=searchString
 comment2.target=java.util.ArrayList\ findCustomerByNameContains(java.lang.String)
+comment2.text=\r\n\ This\ method\ returns\ list\ of\ products\ from\ the\ container\r\n
 numComments=3
