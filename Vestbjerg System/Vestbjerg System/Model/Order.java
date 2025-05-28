@@ -14,6 +14,7 @@ public class Order
     private double totalPrice;
     private String oderDate;
     private ArrayList<Orderline> orderline;
+    private Customer customer;
     
     public Order (String status, int orderNo, double totalPrice, String orderDate)
     {
@@ -32,5 +33,17 @@ public class Order
         this.orderline.add(line);
     }
     
+    public void setCustomer (Customer customer)
+    {
+        this.customer = customer;
+    }
     
+    public String getCustomerInfo ()
+    {
+        if(customer != null) {
+            return "Customer:" + customer.getName();
+        }else{
+            return "No client assigned.";
+        }
+    }
 }
