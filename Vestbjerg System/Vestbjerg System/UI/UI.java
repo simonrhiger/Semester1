@@ -47,18 +47,18 @@ public class UI
     public void searchProducts() {
         //TO-DO:
         //1. spørger brugeren efter søgeord.
-    	Scanner scanner= new scanner(System.in);
+    	Scanner scanner= new Scanner(System.in);
     	System.out.println("Hvilke produkt søger du");
     	String søgtProdukt = scanner.nextLine();
         //2. finder en liste af produkter via controller.searchProducts.
-    	List<Produkt> fundneProdukter = orderController.searchProducts(søgeord);
+    	List<Produkt> fundneProdukter = orderController.searchProducts(søgtProdukt);
 
         //3. tilføjer listen til productList.
     	productList.clear();
         productList.addAll(fundneProdukter);
         //4. viser/printer productlist.
         if (productList.isEmpty()) {
-            System.out.println("Ingen produkter fundet med søgeordet: " + søgeord);
+            System.out.println("Ingen produkter fundet med søgeordet: " + søgtProdukt);
         } else {
             System.out.println("Produkter fundet:");
             int i = 0;
