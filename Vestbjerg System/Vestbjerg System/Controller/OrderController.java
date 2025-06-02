@@ -1,6 +1,7 @@
 package Controller;
 import Model.*;
 import java.util.ArrayList;
+import java.time.LocalDate;
 
 /**
  * This class handles orders.
@@ -22,7 +23,7 @@ public class OrderController
     /**
      * creates new order object an assigns it as the current order being processed.
      */
-    public void makeNewOrder(String status, int orderNo, String orderDate) {
+    public void makeNewOrder(String status, int orderNo, LocalDate orderDate) {
         currentOrder = new Order(status, orderNo, orderDate);
     }
     /**

@@ -1,5 +1,6 @@
 package Model;
 import java.util.ArrayList;
+import java.time.LocalDate;
 
 /**
  * this class represents orders.
@@ -10,14 +11,14 @@ import java.util.ArrayList;
 public class Order {
     private String status;
     private int orderNo;
-    private String orderDate;
+    private LocalDate orderDate;
     private ArrayList<Orderline> orderlines;
     private Customer customer;
     
     /**
      * Constructor for objects of class Order.
      */
-    public Order(String status, int orderNo, String orderDate) {
+    public Order(String status, int orderNo, LocalDate orderDate) {
         this.status = status;
         this.orderNo = orderNo;
         this.orderDate = orderDate;
