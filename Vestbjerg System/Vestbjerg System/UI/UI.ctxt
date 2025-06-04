@@ -17,4 +17,6 @@ comment7.params=
 comment7.target=void\ selectCustomer()
 comment8.params=
 comment8.target=void\ confirmOrder()
-numComments=9
+comment9.params=max
+comment9.target=int\ forceInt(int)
+numComments=10
