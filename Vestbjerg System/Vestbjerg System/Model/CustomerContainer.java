@@ -39,7 +39,7 @@ public class CustomerContainer {
        ArrayList<Customer> result = new ArrayList<>();
        
         for (Customer c : customers){
-            if (c.getName().contains(searchString)){
+            if (c.getName().toLowerCase().contains(searchString)){
                 result.add(c);
             }
         }

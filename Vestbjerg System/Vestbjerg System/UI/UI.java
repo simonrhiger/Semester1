@@ -12,11 +12,13 @@ public class UI {
     private OrderController orderController;
     private ArrayList<SimpleProduct> productList;
     private ArrayList<Customer> customerList;
+    private Scanner scanner;
     
     public UI() {
         orderController = new OrderController();
         productList = new ArrayList<>();
         customerList = new ArrayList<>();
+        scanner = new Scanner(System.in);
     }
     
     public void makeNewOrder() {       
@@ -27,8 +29,7 @@ public class UI {
             searchProducts();
             addProductToOrder();
             System.out.println("Vil du tilføje flere produkter til ordre ja/nej");
-            Scanner scanner= new Scanner(System.in);
-            String svar= scanner.nextLine().toLowerCase();
+            String svar = scanner.nextLine().toLowerCase();
             if(!svar.equals("ja")) {
                 addingProducts = false;
             }
@@ -40,9 +41,8 @@ public class UI {
     }
     
     public void searchProducts() {
-        Scanner scanner= new Scanner(System.in);
         System.out.println("Hvilke produkt søger du");
-        String searchString = scanner.nextLine();
+        String searchString = scanner.nextLine().toLowerCase();
         productList.clear();
         productList = orderController.searchProducts(searchString);
         
@@ -61,7 +61,6 @@ public class UI {
     
     public void addProductToOrder() {
         System.out.println("Hvilke produkt vil du tilføje til ordre");
-        Scanner scanner = new Scanner(System.in);
         int product = scanner.nextInt();
         System.out.println("Hvor mange stk.?");
         int quantity = scanner.nextInt();
@@ -73,9 +72,8 @@ public class UI {
     }
     
     public void searchCustomers() {
-        Scanner scanner= new Scanner(System.in);
         System.out.println("Indtast kunde navn.");
-        String searchString = scanner.nextLine();
+        String searchString = scanner.nextLine().toLowerCase();
         customerList.clear();
         customerList = orderController.searchCustomer(searchString);
         
@@ -92,15 +90,13 @@ public class UI {
     
     public void selectCustomer() {
         System.out.println("Hvilke kunde vil du tilføje til ordren?");
-        Scanner scanner = new Scanner(System.in);
         int customer = scanner.nextInt();
         orderController.selectCustomer(customerList.get(customer));
     }
     
     public void confirmOrder() {
         System.out.println("Bekræft ordre ja/nej");
-        Scanner scanner= new Scanner(System.in);
-        String svar= scanner.nextLine().toLowerCase();
+        String svar = scanner.nextLine().toLowerCase();
         if(!svar.equals("ja")) {
             orderController.confirmOrder();
         }

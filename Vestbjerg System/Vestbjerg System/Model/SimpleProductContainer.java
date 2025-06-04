@@ -39,7 +39,7 @@ public class SimpleProductContainer {
         ArrayList<SimpleProduct> result = new ArrayList<>();
         
         for (SimpleProduct sp : products){
-            if (sp.getName().contains(searchString)){
+            if (sp.getName().toLowerCase().contains(searchString)){
                 result.add(sp);
             }
         }

@@ -7,6 +7,8 @@ public class TryMe
     
     public TryMe()
     {
+        System.out.print('\u000C');
+        
         SimpleProduct product1 = new SimpleProduct(1, "Hammer", "a", "a", "a", "a", 1, 1, 1, 1, 1, 1, "a-20-20");
         SimpleProduct product2 = new SimpleProduct(1, "Skruetrækker", "a", "a", "a", "a", 1, 1, 1, 1, 1, 1, "a-20-20");
         SimpleProductContainer.getInstance().addProduct(product1);
