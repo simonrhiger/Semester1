@@ -13,6 +13,9 @@ public class Order {
     private int orderNo;
     private LocalDate orderDate;
     private ArrayList<Orderline> orderlines;
+    private double totalPrice;
+    private ArrayList<Orderline> orderline;
+
     private Customer customer;
     
     /**
@@ -21,8 +24,13 @@ public class Order {
     public Order(String status, int orderNo, LocalDate orderDate) {
         this.status = status;
         this.orderNo = orderNo;
+
         this.orderDate = orderDate;
         orderlines = new ArrayList<Orderline>();
+
+        this.totalPrice = totalPrice;
+        this.orderDate = orderDate;
+        this.orderline = new ArrayList<Orderline>();
     }
     
     /**
@@ -33,6 +41,7 @@ public class Order {
         orderlines.add(line);
     }
     
+
     /**
      * Sets customer.
      */
