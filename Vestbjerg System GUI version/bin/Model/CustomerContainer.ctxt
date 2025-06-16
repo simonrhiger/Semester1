@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=CustomerContainer
+comment0.text=\r\n\ This\ class\ contains\ a\ list\ of\ all\ customers.\r\n
+comment1.params=
+comment1.target=CustomerContainer()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ CustomerContainer.\r\n
+comment2.params=
+comment2.target=CustomerContainer\ getInstance()
+comment2.text=\r\n\ Singleton.\r\n
+comment3.params=customer
+comment3.target=void\ addCustomer(Customer)
+comment3.text=\r\n\ Adds\ customer\ to\ ArrayList\r\n
+comment4.params=searchString
+comment4.target=java.util.ArrayList\ getCustomerByNameContains(java.lang.String)
+comment4.text=\r\n\ Finds\ every\ customer\ in\ container\ that\ contains\ search\ term\ and\ returns\ an\ array\ of\ customers.\r\n
+numComments=5

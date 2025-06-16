@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=OrderController
+comment0.text=\r\n\ This\ class\ handles\ orders.\r\n
+comment1.params=
+comment1.target=OrderController()
+comment1.text=\r\n\ cosntructor\ for\ objects\ of\ OrderController.\r\n
+comment2.params=status\ orderNo\ orderDate
+comment2.target=void\ makeNewOrder(java.lang.String,\ int,\ java.time.LocalDate)
+comment2.text=\r\n\ creates\ new\ order\ object\ an\ assigns\ it\ as\ the\ current\ order\ being\ processed.\r\n
+comment3.params=searchString
+comment3.target=java.util.ArrayList\ searchProducts(java.lang.String)
+comment3.text=\r\n\ returns\ a\ list\ of\ products\ matching\ search.\r\n
+comment4.params=product\ quantity
+comment4.target=void\ addProduct(Model.SimpleProduct,\ int)
+comment4.text=\r\n\ adds\ product\ to\ order.\r\n
+comment5.params=searchString
+comment5.target=java.util.ArrayList\ searchCustomer(java.lang.String)
+comment5.text=\r\n\ returns\ a\ list\ of\ customers\ matching\ search.\r\n
+comment6.params=customer
+comment6.target=void\ selectCustomer(Model.Customer)
+comment6.text=\r\n\ adds\ customer\ to\ order.\r\n
+comment7.params=
+comment7.target=void\ confirmOrder()
+comment7.text=\r\n\ adds\ order\ to\ container.\r\n
+numComments=8

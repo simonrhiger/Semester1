@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Orderline
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Orderline\ here.\r\n\r\n\ @author\ Karen\ Romo\r\n\ @version\ 26/05/2025\r\n
+comment1.params=product\ quantity\ discount
+comment1.target=Orderline(SimpleProduct,\ int,\ double)
+comment2.params=
+comment2.target=int\ getQuantity()
+comment3.params=
+comment3.target=double\ discount()
+comment4.params=
+comment4.target=double\ getPrice()
+numComments=5
