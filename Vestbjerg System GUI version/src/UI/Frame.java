@@ -56,7 +56,9 @@ public class Frame extends JFrame {
 	
 	private DefaultListModel<String> searchListModel;
 	private DefaultListModel<String> orderListModel;
-	private String selectedCustomer;
+	private ArrayList<SimpleProduct> products;
+	private ArrayList<Customer> customers;
+	private Customer selectedCustomer;
 
 	enum SearchListMode { PRODUCT, CUSTOMER	}
 	SearchListMode searchListMode;	
@@ -275,6 +277,8 @@ public class Frame extends JFrame {
 		bottomButton2.setEnabled(false);
 		bottomButton3.setEnabled(false);
 		
+		products = new ArrayList<SimpleProduct>();
+		customers = new ArrayList<Customer>();
 		orderController = new OrderController();
 		
 		addFakeProductsAndCustomersForTestingPurposes();
@@ -322,40 +326,43 @@ public class Frame extends JFrame {
 		
 		switch (searchListMode) {
 			case SearchListMode.PRODUCT:
-				ArrayList<SimpleProduct> products = orderController.searchProducts(searchString);
+				products = orderController.searchProducts(searchString);
 				
-				for (SimpleProduct p : products) {
-					container.add(p.getName());
-				}				
+				searchListModel.clear();
+				
+				for (SimpleProduct p: products) {
+					if (p.getName().toLowerCase().contains(searchString.toLowerCase())) {
+						searchListModel.addElement(p.getName());
+					}
+				}
 				
 				break;
 			case SearchListMode.CUSTOMER:
-				ArrayList<Customer> customers = orderController.searchCustomer(searchString);
+				customers = orderController.searchCustomer(searchString);
 				
 				for (Customer c : customers) {
-					container.add(c.getName());
+					if (c.getName().toLowerCase().contains(searchString.toLowerCase())) {
+						searchListModel.addElement(c.getName());
+					}
 				}				
 				
 				break;
 		}
-		
-		searchListModel.clear();
-		
-		for (String s : container) {
-			if (s.toLowerCase().contains(searchString.toLowerCase())) {
-				searchListModel.addElement(s);
-			}
-		}
 	}
 	
-	public void updateInfoList(String selection) {		
+	public void updateInfoList(String selection) {
 		switch (searchListMode) {
 			case SearchListMode.PRODUCT:
 				orderListModel.addElement(selection);				
 				break;
 			case SearchListMode.CUSTOMER:
-				selectedCustomer = selection;
-				infoList_Customer_Label.setText("Customer: " + selection);				
+				for (Customer c : customers) {
+					if (c.getName() == selection) {
+						selectedCustomer = c;
+					}
+				}
+				
+				infoList_Customer_Label.setText("Customer: " + selectedCustomer.getName());				
 				break;
 		}
 		
@@ -377,7 +384,7 @@ public class Frame extends JFrame {
 		}
 		
 		//den her linje er også skod, skriv den på en bedre måde. getcustomerbyname()
-		orderController.selectCustomer(orderController.searchCustomer(selectedCustomer).get(0));
+		orderController.selectCustomer(selectedCustomer);
 		orderController.confirmOrder();
 		orderListModel.clear();
 		showFrontPage();
