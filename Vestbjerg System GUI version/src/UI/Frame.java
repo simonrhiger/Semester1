@@ -26,7 +26,6 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.awt.event.ActionEvent;
 import javax.swing.event.ListSelectionListener;
 
@@ -35,7 +34,6 @@ import Controller.OrderController;
 import javax.swing.event.ListSelectionEvent;
 
 public class Frame extends JFrame {
-
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JLabel title;
@@ -53,6 +51,7 @@ public class Frame extends JFrame {
 	private JList<String> searchList_List;
 	private JPanel middleButtons_Panel;
 	private JButton middleButton1;
+	private JPanel languageButtons_Panel;
 	
 	private DefaultListModel<String> searchListModel;
 	private DefaultListModel<String> orderListModel;
@@ -64,6 +63,10 @@ public class Frame extends JFrame {
 	SearchListMode searchListMode;	
 	
 	private OrderController orderController;
+	
+	enum Language { ENGLISH, DANISH	}
+	Language currentLanguage;
+	private LanguageHandler lh;
 	
 	/**
 	 * Launch the application.
@@ -85,7 +88,7 @@ public class Frame extends JFrame {
 	 */
 	public Frame() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(450, 200, 720, 520);
+		setBounds(450, 200, 710, 543);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -104,48 +107,77 @@ public class Frame extends JFrame {
 		bottomButtons_Panel = new JPanel();
 		
 		middleButtons_Panel = new JPanel();
+		
+		languageButtons_Panel = new JPanel();
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(10)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(178)
-							.addComponent(title, GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
-							.addGap(178))
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addComponent(searchList_Panel, GroupLayout.PREFERRED_SIZE, 245, GroupLayout.PREFERRED_SIZE)
-							.addGap(6)
-							.addComponent(middleButtons_Panel, GroupLayout.PREFERRED_SIZE, 140, Short.MAX_VALUE)
-							.addGap(10)
+							.addGap(48)
+							.addComponent(middleButtons_Panel, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(178)
+							.addComponent(title, GroupLayout.DEFAULT_SIZE, 425, Short.MAX_VALUE)))
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING, false)
+						.addGroup(gl_contentPane.createSequentialGroup()
 							.addComponent(infoList_Panel, GroupLayout.PREFERRED_SIZE, 241, GroupLayout.PREFERRED_SIZE)
-							.addContainerGap())))
+							.addContainerGap())
+						.addComponent(languageButtons_Panel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(40)
-					.addComponent(bottomButtons_Panel, GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
+					.addComponent(bottomButtons_Panel, GroupLayout.DEFAULT_SIZE, 788, Short.MAX_VALUE)
 					.addGap(40))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addComponent(title, GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
-					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addComponent(title, GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addComponent(languageButtons_Panel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+							.addPreferredGap(ComponentPlacement.RELATED)))
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(10)
+							.addGap(28)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 								.addComponent(infoList_Panel, GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE)
 								.addComponent(searchList_Panel, GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE))
-							.addGap(10))
+							.addGap(28))
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(142)
-							.addComponent(middleButtons_Panel, GroupLayout.PREFERRED_SIZE, 115, Short.MAX_VALUE)
-							.addGap(121)))
-					.addGap(18)
+							.addGap(160)
+							.addComponent(middleButtons_Panel, GroupLayout.PREFERRED_SIZE, 248, Short.MAX_VALUE)
+							.addPreferredGap(ComponentPlacement.RELATED)))
 					.addComponent(bottomButtons_Panel, GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
 					.addContainerGap())
 		);
+		languageButtons_Panel.setLayout(new GridLayout(1, 0, 0, 0));
+		
+		JButton danishButton = new JButton("Danish");
+		danishButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				currentLanguage = Language.DANISH;
+				title.setText(translate("Front page"));
+				middleButton1.setText(translate("Create order"));
+			}
+		});
+		danishButton.setFont(new Font("Tahoma", Font.BOLD, 16));
+		languageButtons_Panel.add(danishButton);
+		
+		JButton englishButton = new JButton("English");
+		englishButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				currentLanguage = Language.ENGLISH;
+				title.setText(translate("Front page"));
+				middleButton1.setText(translate("Create order"));
+			}
+		});
+		englishButton.setFont(new Font("Tahoma", Font.BOLD, 16));
+		languageButtons_Panel.add(englishButton);
 		
 		middleButton1 = new JButton("Create order");
 		middleButton1.addActionListener(new ActionListener() {
@@ -176,7 +208,7 @@ public class Frame extends JFrame {
 		bottomButton2 = new JButton("Send list to customer");
 		bottomButton2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+
 			}
 		});
 		bottomButton2.setFont(new Font("Tahoma", Font.BOLD, 16));
@@ -281,12 +313,19 @@ public class Frame extends JFrame {
 		customers = new ArrayList<Customer>();
 		orderController = new OrderController();
 		
+		currentLanguage = Language.ENGLISH;
+		lh = new LanguageHandler();
+		
 		addFakeProductsAndCustomersForTestingPurposes();
 		showFrontPage();
 	}
 	
+	public String translate(String s) {
+		return lh.getSentence(currentLanguage.toString(), s);
+	}
+	
 	public void showFrontPage() {
-		title.setText("Front page");
+		title.setText(translate("Front page"));
 		middleButton1.setVisible(true);
 		searchList_Panel.setVisible(false);
 		infoList_Panel.setVisible(false);		
@@ -294,31 +333,34 @@ public class Frame extends JFrame {
 	}
 	
 	public void showAddProductPage() {
-		title.setText("Add products");
+		title.setText(translate("Add product(s)"));
+		languageButtons_Panel.setVisible(false);
 		middleButton1.setVisible(false);
 		searchListModel.clear();
 		searchList_textField.setText("");
 		searchListMode = SearchListMode.PRODUCT;
 		searchList_Panel.setVisible(true);
 		searchList_Panel.setBackground(new Color(255, 0, 0));
-		searchList_Label.setText("Search products");
-		infoList_Panel.setVisible(true);		
+		searchList_Label.setText(translate("Search products"));
+		infoList_Panel.setVisible(true);
 		bottomButtons_Panel.setVisible(true);
-		bottomButton1.setText("Add customer");
+		bottomButton1.setText(translate("Add customer"));
+		bottomButton2.setText(translate("Send list to customer"));
+		bottomButton3.setText(translate("Confirm order"));
 	}
 	
 	public void showAddCustomerPage() {
-		title.setText("Add customer");
+		title.setText(translate("Add customer"));
 		middleButton1.setVisible(false);
 		searchListModel.clear();
 		searchList_textField.setText("");
 		searchListMode = SearchListMode.CUSTOMER;
 		searchList_Panel.setVisible(true);
 		searchList_Panel.setBackground(new Color(128, 128, 255));
-		searchList_Label.setText("Search customers");
+		searchList_Label.setText(translate("Search customers"));
 		infoList_Panel.setVisible(true);
 		bottomButtons_Panel.setVisible(true);
-		bottomButton1.setText("Add products");
+		bottomButton1.setText(translate("Add product(s)"));
 	}
 	
 	public void updateSearchList(String searchString) {
